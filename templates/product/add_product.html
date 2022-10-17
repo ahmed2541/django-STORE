@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+<body>
+    
+
+    <br>
+
+    <div class="col-lg-8 mx-auto">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            
+            <center>
+            <div class="inadd">
+                <input class=" w-75 mt-3 mx-auto" type="submit" value="Add Item">
+            </div>
+            </center>
+            
+        </form>
+    </div>
+
+    <br>
+</body>
+{% endblock body %}
